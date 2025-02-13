@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <title>Career Match</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -13,14 +13,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 body{
     font-family: 'Times New Roman', Times, serif;
-
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+   
 }
 h1{
     text-align: center;
-    font-size: 40px;
     background-color:#03346E;
     color:aliceblue;
     padding-top: 30px;
@@ -36,8 +37,8 @@ h1{
 
 .navbar ul {
     list-style-type: none; /* Remove bullet points */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 0px; /* Remove default margin */
+    padding: 0px; /* Remove default padding */
     display: flex; /* Use flexbox for the list */
     font-size: 20px;
 }
@@ -60,72 +61,66 @@ h1{
 }
 
 
-
-.card1, card2{
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    width: 45%; /* Adjust width as needed */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
+.container {
+    display: flex; /* Use flexbox for the container */
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px; /* Space between cards */
 }
 
-.student-image {
-    width: 270px; /* Set image width */
-    height: 270px; /* Set image height to match width for a circle */
+.card {
+    display: flex; /* Use flexbox for the card */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    background-color: white; /* Card background color */
+    border: 1px solid #ccc; /* Card border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    width: 200px; /* Fixed width for cards */
+    text-align: center; /* Center text inside cards */
+        }
+
+.card:hover {
+    transform: scale(1.02);
+    }
+.card2 {
+    display: flex; /* Use flexbox for the card */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    background-color: white; /* Card background color */
+    border: 1px solid #ccc; /* Card border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    width: 200px; /* Fixed width for cards */
+    text-align: center; /* Center text inside cards */
+}
+.card2:hover {
+    transform: scale(1.02);
+}
+
+.student-image, .employer-image {
+    width: 100px; /* Set image width */
+    height: 100px; /* Set image height to match width for a circle */
     border-radius: 50%; /* Make the image circular */
-    position: absolute; /* Position the image absolutely */
-    right: 10px; /* Move the image to the left to align with the rounded corner */
-    top: 50%; /* Center the image vertically */
-    transform: translateY(-50%); /* Adjust for the height of the image */
     object-fit: cover; /* Ensure the image covers the area without distortion */
 }
 
-.student-login{
+.student-login, .employer-login {
     display: inline-block;
-    padding: 20px 30px;
+    padding: 10px 20px;
     font-size: 25px;
     color: white;
     background-color: #608BC1; /* Bootstrap primary color */
     text-decoration: none; /* Remove underline */
     border-radius: 30px; /* Rounded corners */
     transition: background-color 0.3s; /* Smooth transition */
-    margin-left: 270px;
+    margin-left: 20px; /* Space between image and button */
 }
 
-
-.student-login:hover {
-    background-color: #6a94c433; /* Light hover effect */
-}
-
-
-
-.employer-image {
-    width: 250px; /* Set image width */
-    height: 250px; /* Set image height to match width for a circle */
-    border-radius: 50%; /* Make the image circular */
-    position: absolute; /* Position the image absolutely */
-    left: 10px; /* Move the image to the left to align with the rounded corner */
-    top: 50%; /* Center the image vertically */
-    transform: translateY(-50%); /* Adjust for the height of the image */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-}
-
-.employer-login{
-    display: inline-block;
-    padding: 20px 30px;
-    font-size:25px;
-    color: white;
-    background-color: #608BC1; /* Bootstrap primary color */
-    text-decoration: none; /* Remove underline */
-    border-radius: 30px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition */
-    margin-left: 300px;
-}
-
-
-.employer-login:hover {
+.student-login:hover, .employer-login:hover {
     background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
 }
 
@@ -133,29 +128,31 @@ h1{
     background-color: #03346E;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding:10px;
     
 }
 
 .footer .container {
     max-width: 1200px;
-    margin: 10px auto;
-    padding: 0 20px;
-    margin-top: 20px;
+    padding:-10px;
+    margin-top: 100px;
+    margin-bottom:20px;
+    padding-bottom:0px;
 }
 
 .footer p {
-    margin: 0;
+    margin: 0px;
+    padding:0px;
 }
 
 .footer .social-links {
     list-style: none;
-    padding: 0;
+    padding: -10px;
 }
 
 .footer .social-links li {
     display: inline;
-    margin: 0 10px;
+    margin:0px;
 }
 
 .footer .social-links a {
@@ -166,23 +163,28 @@ h1{
 .footer .social-links a:hover {
     text-decoration: underline;
 }
+.container {
+width: 100%; /* Full width */
+max-width: 1200px; /* Maximum width */
+margin: 0 auto; /* Center the container */
+}
 
 </style>
 <body>
     <div class="header">
         <h1> Welcome to CareerMatch</h1>
-    </div>
-   
+   </div>
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="adminlogin.html">Admin-Login</a></li>
+            <li><a href="/templates/index.html">Home</a></li>
+            <li><a href="/templates/about.html">About Us</a></li>
+            <li><a href="/templates/adminlogin.html">Admin-Login</a></li>
         </ul>
     </nav>
-   
-   <div class="container">
-        <div class="card1">
+    <br>
+    <br>
+     <div class="container">
+        <div class="card">
             <img src="/static/images/student.jpg" alt="image of a student" class="student-image">
             <a href="/templates/student.html" class="student-login">Student Login</a>
         </div>
@@ -191,13 +193,13 @@ h1{
             <a href="/templates/employer.html" class="employer-login">Employer Login</a>
         </div>
     </div>
-    </div>
     <br>
     <br>
+    <br> 
     <footer class="footer">
         <div class="container">
             <p>&copy; 2023 Your Company Name. All rights reserved.</p>
-            <br>
+        
             <ul class="social-links">
                 <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -208,3 +210,6 @@ h1{
 
 </body>
 </html>
+  
+
+
