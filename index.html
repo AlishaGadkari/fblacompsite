@@ -104,14 +104,20 @@ h1{
     transform: scale(1.02);
 }
 
-.student-image, .employer-image {
+ .employer-image {
     width: 150px; /* Set image width */
     height: 150px; /* Set image height to match width for a circle */
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    
+    border-radius: 75%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the area without distortion */   
 }
-
+    
+.student-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 75%;
+    objective-fit: cover; 
+}
+    
 .student-login, .employer-login {
     display: inline-block;
     padding: 10px 20px;
