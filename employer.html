@@ -1,11 +1,11 @@
-<!DOCTYPE html>    
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Match</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -155,50 +155,46 @@
 .footer .social-links a:hover {
     text-decoration: underline;
 }
-</style>
- 
+    </style>
+</head>
 <body>
-    
     <div class="header">
-        <h1> Login to CareerMatch</h1>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="adminlogin.html">Admin-Login</a></li>
-            </ul>
-        </nav>
+        <h1>Login to CareerMatch</h1>
     </div>
-
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="adminlogin.html">Admin-Login</a></li>
+        </ul>
+    </nav>
     <div class="login-container">
-        <h2>Employer Login</h2>
+        <h2>Employer Login </h2>
         <form id="employerlogin" action="/login" method="POST">
-            <div class="form-group">
-                <input type="text" id="username" name="username" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <input type="password" id="password" name="password" placeholder="Password" required>
-            </div>
-            <a href="employernewaccount.html" style="display: block; text-align: center; margin-bottom: 10px;">Create Account</a>
+            <input type="text" id="username" placeholder="Username" required>
+            <br>
+            <input type="password" id="password" placeholder="Password" required>
+            <br>
+            <div id="newaccountlink"><a href="employernewaccount.html">Sign Up here</a></div>
+            <br>
             <button type="submit">Login</button>
         </form>
-        <div id="message"></div>
+        <div id="message"></div> <!-- Added message display element -->
+    </div>
+    <br>
+    <br>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; CareerMatch. All rights reserved.</p>
+            <br>
+            <ul class="social-links">
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
         </div>
-        <br>
-        <br>
-        <br>
-        <footer class="footer">
-            <div class="container">
-                <p>&copy; CareerMatch. All rights reserved.</p>
-                <br>
-                <ul class="social-links">
-                    <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-            </div>
-        </footer>
-        <script>
+    </footer>
+    <script>
             // Pre-set credentials (change these to your actual credentials)
             const PRESET_PASSWORD = "123cookies"; // Change this to your actual password
             const PRESET_USERNAME = "cookiecrew@gmail.com"; // Change this to your actual username
@@ -220,8 +216,8 @@
                 }
             });
         </script>
-    </body>
-    </html>
+</body>
+</html>
 
 
 
